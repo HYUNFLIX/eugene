@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 혁신 TF · 바이브코딩 — 유진기업</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">EUGENE AI TF</span>
+  <div class="nav-links">
+    <a href="#about">개요</a>
+    <a href="#schedule">일정</a>
+    <a href="#instructor">강사</a>
+    <a href="#faq">FAQ</a>
+    <a href="#apply">신청</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">
+      <span class="toggle-icon">☀️</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<canvas id="heroCanvas"></canvas>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="pulse"></span>
+      참가 신청 진행 중
+    </div>
+
+    <h1>
+      코드 한 줄 없이,<br>
+      <span class="gradient">당신의 아이디어를 현실로.</span>
+    </h1>
+
+    <p class="hero-copy">
+      AI와 대화하며 실제 동작하는 업무 도구를 만드는<br>
+      유진기업 AI 혁신 TF · 바이브코딩 프로그램
+    </p>
+
+    <div class="countdown">
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-days">--</span>
+        <span class="cd-label">Days</span>
+      </div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-hours">--</span>
+        <span class="cd-label">Hours</span>
+      </div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-mins">--</span>
+        <span class="cd-label">Min</span>
+      </div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-secs">--</span>
+        <span class="cd-label">Sec</span>
+      </div>
+    </div>
+
+    <a href="#apply" class="hero-cta">기획서 제출하기 →</a>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="sec-header" data-reveal>
+      <p class="tag">About</p>
+      <h2>8주 동안, 팀의 진짜 문제를 풀어냅니다</h2>
+    </div>
+
+    <div class="grid-2x2">
+      <div class="feat" data-reveal>
+        <div class="feat-icon" style="--accent: var(--violet)">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>바이브코딩</h3>
+        <p>코딩 지식 없이 AI와 대화하며<br>실제 동작하는 도구를 만드는 새로운 방식</p>
+      </div>
+      <div class="feat" data-reveal>
+        <div class="feat-icon" style="--accent: var(--emerald)">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>실전 아웃풋</h3>
+        <p>우리 팀 업무에 바로 쓸 수 있는 도구를<br>직접 기획하고 배포까지 완성</p>
+      </div>
+      <div class="feat" data-reveal>
+        <div class="feat-icon" style="--accent: var(--sky)">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>풀스택 환경</h3>
+        <p>AI Studio · GitHub · Vercel<br>세팅부터 라이브 배포까지 실습</p>
+      </div>
+      <div class="feat" data-reveal>
+        <div class="feat-icon" style="--accent: var(--amber)">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>2인 1팀</h3>
+        <p>부서 동료와 함께 참여<br>9주 내 핵심 기능 1~2개 집중 개발</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCHEDULE ═══ -->
+<section class="section" id="schedule">
+  <div class="wrap">
+    <div class="sec-header" data-reveal>
+      <p class="tag">Schedule</p>
+      <h2>5월 킥오프, 7월 데모데이<br><span class="dim">총 8주간의 여정</span></h2>
+    </div>
+
+    <!-- 미니 캘린더 -->
+    <div class="mini-cal" data-reveal>
+      <div class="cal-month" id="cal-may"></div>
+      <div class="cal-month" id="cal-jun"></div>
+      <div class="cal-month" id="cal-jul"></div>
+    </div>
+
+    <div class="cal-legend" data-reveal>
+      <span class="legend-item"><span class="leg-dot s1"></span>기획·준비</span>
+      <span class="legend-item"><span class="leg-dot s2"></span>교육·개발</span>
+      <span class="legend-item"><span class="leg-dot s3"></span>완성·발표</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="stage s1 open">
+        <div class="stage-header">
+          <span class="stage-dot"></span>
+          <span class="stage-name">1단계 — 기획·준비</span>
+          <span class="stage-period">5/20 ~ 6/3</span>
+          <span class="stage-arrow">▾</span>
+        </div>
+        <div class="stage-body" style="max-height:2000px">
+          <div class="stage-inner">
+            <div class="week">
+              <div class="week-left">
+                <div class="week-date">5/20</div>
+                <div class="week-day">수 · 1주</div>
+              </div>
+              <div class="week-right">
+                <h4>킥오프 미팅</h4>
+                <p>목표·규칙 공유, 팀 구성 확정. 문제 정의 + 기획서 초안 제출</p>
+                <div class="tags">
+                  <span class="t g">팀 명단 확정</span>
+                  <span class="t g">기획서 초안</span>
+                  <span class="t loc">대회의실</span>
+                </div>
+              </div>
+            </div>
+            <div class="week">
+              <div class="week-left">
+                <div class="week-date">5/27</div>
+                <div class="week-day">수 · 2주</div>
+              </div>
+              <div class="week-right">
+                <h4>검토·확정</h4>
+                <p>IT기획팀 기획서 검토 · 피드백 → 과제 최종 확정</p>
+                <div class="tags">
+                  <span class="t g">과제 확정 완료</span>
+                  <span class="t loc">대회의실</span>
+                </div>
+              </div>
+            </div>
+            <div class="week">
+              <div class="week-left">
+                <div class="week-date">6/3</div>
+                <div class="week-day">수 · 3주</div>
+              </div>
+              <div class="week-right">
+                <h4>PRD 확정</h4>
+                <p>화면 구성 · 산출물 정의 · 마크다운 작성</p>
+                <div class="tags">
+                  <span class="t g">PRD 확정 완료</span>
+                  <span class="t loc">대회의실</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage s2">
+        <div class="stage-header">
+          <span class="stage-dot"></span>
+          <span class="stage-name">2단계 — 교육·개발</span>
+          <span class="stage-period">6/10 ~ 6/24</span>
+          <span class="stage-arrow">▾</span>
+        </div>
+        <div class="stage-body">
+          <div class="stage-inner">
+            <div class="week training">
+              <div class="week-left">
+                <div class="week-date">6/10</div>
+                <div class="week-day">수 · 4주</div>
+              </div>
+              <div class="week-right">
+                <h4>교육 1회 — AI 툴 기초 (전일)</h4>
+                <p>AI Studio · GitHub · Vercel 세팅 및 기초 실습</p>
+                <div class="tags">
+                  <span class="t g">툴 세팅 완료</span>
+                  <span class="t loc">인재개발원</span>
+                  <span class="t v">⭐ 강사 교육</span>
+                </div>
+              </div>
+            </div>
+            <div class="week training">
+              <div class="week-left">
+                <div class="week-date">6/11</div>
+                <div class="week-day">목 · 4주</div>
+              </div>
+              <div class="week-right">
+                <h4>교육 2회 — AI 툴 심화 (전일)</h4>
+                <p>과제 심화버전 · 전체 배포 흐름 실습</p>
+                <div class="tags">
+                  <span class="t g">배포 환경 준비</span>
+                  <span class="t loc">인재개발원</span>
+                  <span class="t v">⭐ 강사 교육</span>
+                </div>
+              </div>
+            </div>
+            <div class="week training">
+              <div class="week-left">
+                <div class="week-date">6/17</div>
+                <div class="week-day">수 · 5주</div>
+              </div>
+              <div class="week-right">
+                <h4>바이브코딩 데이 — 전일 집중 개발</h4>
+                <p>IT기획팀 주관 · 팀별 실제 기능 구현 (멘토링)</p>
+                <div class="tags">
+                  <span class="t g">기본 기능 동작</span>
+                  <span class="t loc">인재개발원</span>
+                  <span class="t v">⭐ 강사 교육</span>
+                </div>
+              </div>
+            </div>
+            <div class="week">
+              <div class="week-left">
+                <div class="week-date">6/24</div>
+                <div class="week-day">수 · 6주</div>
+              </div>
+              <div class="week-right">
+                <h4>중간 발표</h4>
+                <p>구현 수준 공유 · 피드백 · 방향 조정</p>
+                <div class="tags">
+                  <span class="t g">중간 평가 완료</span>
+                  <span class="t loc">대회의실</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage s3">
+        <div class="stage-header">
+          <span class="stage-dot"></span>
+          <span class="stage-name">3단계 — 완성·발표</span>
+          <span class="stage-period">7/1 ~ 7/8</span>
+          <span class="stage-arrow">▾</span>
+        </div>
+        <div class="stage-body">
+          <div class="stage-inner">
+            <div class="week">
+              <div class="week-left">
+                <div class="week-date">7/1</div>
+                <div class="week-day">수 · 7주</div>
+              </div>
+              <div class="week-right">
+                <h4>수정·보완</h4>
+                <p>피드백 반영 · Vercel 최종 배포 · 발표 자료 준비</p>
+                <div class="tags">
+                  <span class="t g">배포 URL 완성</span>
+                  <span class="t g">발표 자료</span>
+                  <span class="t loc">대회의실</span>
+                </div>
+              </div>
+            </div>
+            <div class="week">
+              <div class="week-left">
+                <div class="week-date">7/8</div>
+                <div class="week-day">수 · 8주</div>
+              </div>
+              <div class="week-right">
+                <h4>Demo Day 🎉</h4>
+                <p>팀별 최종 발표 · KPI 평가 · 전체 피드백 · 수료</p>
+                <div class="tags">
+                  <span class="t g">발표 완료</span>
+                  <span class="t loc">대회의실</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTRUCTOR ═══ -->
+<section class="section" id="instructor">
+  <div class="wrap">
+    <div class="sec-header" data-reveal>
+      <p class="tag">Instructor</p>
+      <h2>함께할 강사</h2>
+    </div>
+
+    <div class="inst-grid" data-reveal>
+      <div class="inst-left">
+        <div class="inst-avatar">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="16" fill="var(--violet)" fill-opacity="0.12"/>
+            <text x="24" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="var(--violet)" font-family="'Space Grotesk',sans-serif">K</text>
+          </svg>
+        </div>
+        <h3>김현</h3>
+        <p>
+          AI 도구 활용 실무 교육 전문.<br>
+          기초 실습부터 심화 개발, 바이브코딩 데이까지<br>
+          전 교육 과정을 리드합니다.
+        </p>
+        <div class="note">
+          교육 참여 일정 총 <strong>3일</strong> — 전일 진행
+        </div>
+      </div>
+      <div class="inst-right">
+        <div class="d-row">
+          <span class="d">6/10</span>
+          <div class="info"><strong>AI 툴 기초 실습</strong>수요일 · 인재개발원</div>
+        </div>
+        <div class="d-row">
+          <span class="d">6/11</span>
+          <div class="info"><strong>AI 툴 심화 실습</strong>목요일 · 인재개발원</div>
+        </div>
+        <div class="d-row">
+          <span class="d">6/17</span>
+          <div class="info"><strong>바이브코딩 데이</strong>수요일 · 인재개발원</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-header" data-reveal>
+      <p class="tag">FAQ</p>
+      <h2>자주 묻는 질문</h2>
+    </div>
+
+    <div class="faq-list" data-reveal>
+      <div class="faq-item">
+        <button class="faq-q">개발 경험이 전혀 없어도 참여할 수 있나요?</button>
+        <div class="faq-a">
+          <p>네, 바이브코딩은 코딩 없이 AI와 대화로 도구를 만드는 방식입니다. 개발 경험이 전혀 없어도 괜찮습니다. 교육일(6/10~6/11)에 기초부터 안내합니다.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">다른 부서 사람과 팀을 구성해도 되나요?</button>
+        <div class="faq-a">
+          <p>이번 TF는 같은 부서 내 2명이 1팀으로 참여하는 것을 기본으로 합니다. 부서 간 협업이 필요한 경우 IT기획팀에 사전 문의해 주세요.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">기획서에 어떤 수준의 아이디어를 써야 하나요?</button>
+        <div class="faq-a">
+          <p>거창할 필요 없습니다. 매일 반복하는 업무 중 "이거 자동화되면 좋겠다" 싶은 것이면 충분합니다. 예: 주간보고 양식 자동 생성, 회의록 요약 도구, 재고 현황 대시보드 등.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">9주 동안 매주 참석해야 하나요?</button>
+        <div class="faq-a">
+          <p>전체 8회 중 필수 참석은 킥오프(5/20), 교육(6/10·11·17), 중간발표(6/24), 데모데이(7/8)입니다. 그 외 주차는 팀 자율 진행이며, 멘토 지원이 필요하면 별도 요청 가능합니다.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">만든 결과물은 실제로 업무에 사용할 수 있나요?</button>
+        <div class="faq-a">
+          <p>네, 그것이 이 프로그램의 목표입니다. Vercel로 배포된 실제 동작하는 도구를 만들며, 데모데이 이후에도 팀에서 계속 활용할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPLY ═══ -->
+<section class="section" id="apply">
+  <div class="wrap">
+    <div class="sec-header" data-reveal>
+      <p class="tag">Apply</p>
+      <h2>기획서 제출 안내</h2>
+    </div>
+
+    <div class="grid-2x2">
+      <div class="feat" data-reveal style="--accent: var(--violet)">
+        <div class="feat-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>제출 정보</h3>
+        <ul class="feat-list">
+          <li>제출처: IT기획팀</li>
+          <li>팀 정보 + 팀원 정보 포함</li>
+          <li>업무 과제 2~3개 (과제 1·2 필수 / 3 선택)</li>
+        </ul>
+        <div class="dl-box">
+          <strong>5월 15일(금) 마감</strong>
+          <span>제출 후 실현 가능성 검토 → 확정 안내</span>
+        </div>
+      </div>
+
+      <div class="feat" data-reveal style="--accent: var(--emerald)">
+        <div class="feat-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>작성 유의사항</h3>
+        <ul class="feat-list">
+          <li>문제는 '수치'로 표현 (주 3회, 팀원 4명, 각 30분)</li>
+          <li>9주 내 완성 가능한 핵심 기능 1~2개에 집중</li>
+          <li>개인정보 · 인사/급여 · 보안 2등급 이상 불가</li>
+          <li>판단 어려운 경우 IT기획팀에 사전 문의</li>
+        </ul>
+      </div>
+
+      <div class="feat" data-reveal style="--accent: var(--sky)">
+        <div class="feat-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <h3>첨부 파일</h3>
+        <ul class="feat-list">
+          <li><strong>① 아이디어 기획서</strong><br>팀 정보, 업무 과제 작성 후 제출</li>
+          <li><strong>② 기획서 작성가이드</strong><br>체크리스트 · 작성 예시 · 보안 수칙 포함</li>
+        </ul>
+      </div>
+
+      <div class="feat" data-reveal style="--accent: var(--amber)">
+        <div class="feat-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>문의</h3>
+        <ul class="feat-list">
+          <li>IT기획팀 한예진 대리</li>
+          <li>dpwls99@eugenes.co.kr</li>
+          <li>킥오프(5/20) 이전 기획서 제출 필수</li>
+          <li>세부 진행 방식은 킥오프에서 안내</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-banner">
+  <div class="wrap">
+    <div class="cta-badge">마감 임박</div>
+    <h2>더 이상 미루지 마세요.</h2>
+    <p>5월 15일 기획서 마감 — 지금 팀원과 아이디어를 정리하세요.</p>
+    <a href="#apply" class="cta-btn">제출 안내 보기 ↓</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">유진기업(주) · IT기획팀 주관 · AI 혁신 TF 프로그램</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
