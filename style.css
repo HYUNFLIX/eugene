@@ -6,14 +6,14 @@
 :root,
 [data-theme="dark"] {
   --bg: #0f0f14;
-  --bg-elevated: #1a1a22;
-  --bg-glass: rgba(255,255,255,0.03);
-  --border: rgba(255,255,255,0.08);
-  --border-hover: rgba(255,255,255,0.15);
+  --bg-elevated: #1e1e2a;
+  --bg-glass: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.10);
+  --border-hover: rgba(255,255,255,0.18);
 
   --ink: #f0f0f5;
-  --ink-sub: #a0a0b8;
-  --ink-dim: #6b6b80;
+  --ink-sub: #b8b8cc;
+  --ink-dim: #7a7a92;
 
   --violet: #8b5cf6;
   --violet-glow: rgba(139,92,246,0.25);
@@ -252,10 +252,10 @@ body {
 }
 
 .feat {
-  padding: 36px 32px;
+  padding: 32px 28px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 16px;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
@@ -276,14 +276,18 @@ body {
 }
 .feat:hover::before { opacity: 1; }
 
+.feat-head {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 14px;
+}
 .feat-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  flex-shrink: 0;
   background: color-mix(in srgb, var(--accent, var(--violet)) 12%, transparent);
   color: var(--accent, var(--violet));
   transition: background 0.3s, transform 0.3s;
@@ -292,22 +296,22 @@ body {
   background: color-mix(in srgb, var(--accent, var(--violet)) 20%, transparent);
   transform: scale(1.05);
 }
-.feat h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--ink); }
-.feat p { font-size: 14px; color: var(--ink-sub); line-height: 1.8; }
+.feat h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin: 0; }
+.feat p { font-size: 15px; color: var(--ink-sub); line-height: 1.75; }
 
 .feat-list {
   list-style: none;
   display: flex; flex-direction: column; gap: 8px;
 }
 .feat-list li {
-  font-size: 13.5px; color: var(--ink-sub); line-height: 1.75;
+  font-size: 14.5px; color: var(--ink-sub); line-height: 1.75;
   padding-left: 16px; position: relative;
 }
 .feat-list li::before {
   content: '—';
   position: absolute; left: 0;
   color: var(--accent, var(--ink-dim));
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 12px;
 }
 .feat-list li strong { color: var(--ink); }
